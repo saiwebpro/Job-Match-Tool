@@ -9,8 +9,8 @@ body {
     height: 100vh;
     background: url('background-image.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
+    background-size: 125%;
+    background-position: 0% 76%;
 }
 
 .container {
