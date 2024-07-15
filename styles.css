@@ -87,10 +87,6 @@ textarea {
     display: none;
 }
 
-#tagsContainer, #languagesContainer, #certificationsContainer {
-    margin-top: 10px;
-}
-
 .tag, .language, .certification {
     display: inline-block;
     background-color: #007bff;
@@ -132,10 +128,6 @@ button:hover {
     font-weight: bold;
     color: #007bff;
     text-align: center;
-}
-
-#fileContent {
-    display: none;
 }
 
 .small-font {
