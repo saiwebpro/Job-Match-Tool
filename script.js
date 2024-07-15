@@ -50,10 +50,33 @@ function handleFileSelect(event) {
                 readDOCX(fileContent);
             } else {
                 document.getElementById('resume').value = fileContent;
-                document.getElementById('fileContent').innerText = fileContent;
             }
         };
-        reader.readAsArrayBuffer(file);
+        reader.readAsText(file);
+    }
+}
+
+function handleDragOver(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+}
+
+function handleDrop(event) {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const fileContent = e.target.result;
+            if (file.type === 'application/pdf') {
+                readPDF(fileContent);
+            } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                readDOCX(fileContent);
+            } else {
+                document.getElementById('resume').value = fileContent;
+            }
+        };
+        reader.readAsText(file);
     }
 }
 
