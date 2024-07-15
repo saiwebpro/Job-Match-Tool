@@ -1,4 +1,4 @@
-# AI Job Match Tool
+# Job Match Tool
 
 The AI Job Match Tool is a web application designed to help job seekers match their resumes against job descriptions using keywords. Users can upload their resumes, enter job keywords, and calculate the match percentage based on keyword matches found in the resume.
 
