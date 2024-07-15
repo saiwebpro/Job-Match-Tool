@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://corporate-assets.lucid.co/chart/de968d4f-e620-4d02-909b-afbeacdb7b4f.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 51px rgb(0 0 0 / 70%);
+    width: 800px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    width: calc(50% - 10px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+textarea, input[type="text"], input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 150px;
+    max-height: 300px;
+}
+
+.drag-drop {
+    text-align: center;
+}
+
+.drag-drop-area {
+    border: 2px dashed #5daff7;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    height: 70px;
+}
+
+.drag-drop-text {
+    font-size: 16px;
+    color: #888;
+}
+
+.drag-drop-area input[type="file"] {
+    display: none;
+}
+
+#tagsContainer, #languagesContainer, #certificationsContainer {
+    margin-top: 10px;
+}
+
+.tag, .language, .certification {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 20px 5px 10px;
+    border-radius: 20px;
+    margin: 5px 5px 0 0;
+    font-size: 14px;
+    position: relative;
+}
+
+.tag .close, .language .close, .certification .close {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+
+#fileContent {
+    display: none;
+}

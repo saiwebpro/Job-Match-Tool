@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Match</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Match Tool</h1>
+        <div class="form-columns">
+            <div class="form-column">
+                <div class="form-group drag-drop">
+                    <label for="resume">Upload Resume</label>
+                    <div class="drag-drop-area" id="dragDropArea">
+                        <div class="drag-drop-text">Drag & Drop files here <br> <span>(Supported Formats: pdf, docx, doc, txt)</span></div>
+                        <input type="file" id="resumeFile" accept=".txt,.pdf,.doc,.docx" onchange="handleFileSelect(event)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume:</label>
+                    <textarea id="resume" rows="10" placeholder="Paste resume here"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="keywords">Job Keywords:</label>
+                    <input id="keywordInput" type="text" placeholder="Enter job keywords and press comma">
+                    <div id="tagsContainer"></div>
+                </div>
+            </div>
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="experience">Years of Experience:</label>
+                    <input id="experience" type="number" placeholder="Enter required years of experience">
+                </div>
+                <div class="form-group">
+                    <label for="education">Required Education:</label>
+                    <input id="education" type="text" placeholder="Enter required education level">
+                </div>
+                <div class="form-group">
+                    <label for="location">Job Location:</label>
+                    <input id="location" type="text" placeholder="Enter job location">
+                </div>
+                <div class="form-group">
+                    <label for="language">Required Languages:</label>
+                    <input id="language" type="text" placeholder="Enter required languages">
+                    <div id="languagesContainer"></div>
+                </div>
+                <div class="form-group">
+                    <label for="certifications">Required Certifications:</label>
+                    <input id="certifications" type="text" placeholder="Enter required certifications">
+                    <div id="certificationsContainer"></div>
+                </div>
+            </div>
+        </div>
+        <button onclick="calculateMatch()">Validate</button>
+        <div id="result"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
