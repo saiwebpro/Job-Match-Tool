@@ -137,3 +137,7 @@ button:hover {
 #fileContent {
     display: none;
 }
+
+.small-font {
+    font-size: 13px;
+}
