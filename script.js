@@ -40,20 +40,13 @@ document.getElementById('certifications').addEventListener('keydown', function(e
 
 function handleFileSelect(event) {
     const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const fileContent = e.target.result;
-            if (file.type === 'application/pdf') {
-                readPDF(fileContent);
-            } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
-                readDOCX(fileContent);
-            } else {
-                document.getElementById('resume').value = fileContent;
-            }
-        };
-        reader.readAsText(file);
-    }
+    handleFile(file);
+}
+
+function handleDrop(event) {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    handleFile(file);
 }
 
 function handleDragOver(event) {
@@ -61,9 +54,7 @@ function handleDragOver(event) {
     event.dataTransfer.dropEffect = 'copy';
 }
 
-function handleDrop(event) {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
+function handleFile(file) {
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
